@@ -1,17 +1,18 @@
 ---
-import { Text, Button, Badge } from '../components/Base'
+import { Text, Button, Badge, Link } from '../components/Base'
 import MainLayout from '../components/MainLayout.astro';
 ---
 <MainLayout title="Home">
 	<section class="space-y-3">
 		<div class="space-y-2">
 			<Text variant="display">Display</Text>
-			<Text variant="h1">Astro</Text>
-			<Text variant="h2">Astro</Text>
-			<Text variant="h3">Astro</Text>
-			<Text variant="p">Astro</Text>
-			<Text variant="small-p">Astro</Text>
+			<Text variant="h1">Heading 1</Text>
+			<Text variant="h2">Heading 2</Text>
+			<Text variant="h3">Heading 3</Text>
+			<Text variant="p">Paragraph</Text>
+			<Text variant="small-p">Small Paragraph</Text>
 		</div>
+		<Link>Link</Link>
 		<div class="space-x-2">
 			<Button variant='contain'>Test</Button>
 			<Button variant='outline'>Test</Button>
