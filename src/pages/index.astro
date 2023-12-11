@@ -1,16 +1,19 @@
 ---
-
+import { Text, Button } from '../components/Base'
+import MainLayout from '../components/MainLayout.astro';
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Home">
+	<section class="space-y-2">
+		<Text variant="display">Display</Text>
+		<Text variant="h1">Astro</Text>
+		<Text variant="h2">Astro</Text>
+		<Text variant="h3">Astro</Text>
+		<Text variant="p">Astro</Text>
+		<Text variant="small-p">Astro</Text>
+		<div>
+			<Button variant='contain'>Test</Button>
+			<Button variant='outline'>Test</Button>
+			<Button variant='link'>Test</Button>
+		</div>
+	</section>
+</MainLayout>
