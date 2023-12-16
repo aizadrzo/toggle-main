@@ -1,52 +1,13 @@
 ---
-import { Text, Button, Badge, Link } from '../components/Base'
+import About from '../components/About.astro';
+import Hero from '../components/Hero.astro';
 import MainLayout from '../components/MainLayout.astro';
+import Process from '../components/Process.astro';
+import Services from '../components/Services.astro';
 ---
 <MainLayout title="Home">
-	<section class="space-y-3">
-		<div class="space-y-2">
-			<Text variant="display">Display</Text>
-			<Text variant="h1">Heading 1</Text>
-			<Text variant="h2">Heading 2</Text>
-			<Text variant="h3">Heading 3</Text>
-			<Text variant="p">Paragraph</Text>
-			<Text variant="small-p">Small Paragraph</Text>
-		</div>
-		<Link>Link</Link>
-		<div class="space-x-2">
-			<Button variant='contain'>Test</Button>
-			<Button variant='outline'>Test</Button>
-			<Button variant='ghost'>Test</Button>
-			<Button variant='link'>Test</Button>
-		</div>
-		<div class="flex items-end gap-x-3">
-			<Button variant='contain' size='xs'>Test</Button>
-			<Button variant='contain' size='sm'>Test</Button>
-			<Button variant='contain' size='md'>Test</Button>
-			<Button variant='contain' size='lg'>Test</Button>
-		</div>
-		<div class="space-x-2">
-			<Button variant='contain' colorStyle='primary'>Test</Button>
-			<Button variant='contain' colorStyle='secondary'>Test</Button>
-			<Button variant='contain' colorStyle='accent'>Test</Button>
-			<Button variant='contain' colorStyle='green'>Test</Button>
-			<Button variant='contain' colorStyle='red'>Test</Button>
-			<Button variant='contain' colorStyle='yellow'>Test</Button>
-		</div>
-		<div class="flex items-baseline gap-x-3">
-			<Badge colorStyle='primary' size='xs'>Badge</Badge>
-			<Badge colorStyle='primary' size='sm'>Badge</Badge>
-			<Badge colorStyle='primary' size='md'>Badge</Badge>
-			<Badge colorStyle='primary' size='lg'>Badge</Badge>
-		</div>
-		<div class="space-x-2">
-			<Badge colorStyle='primary' size='md'>Badge</Badge>
-			<Badge colorStyle='secondary' size='md'>Badge</Badge>
-			<Badge colorStyle='accent' size='md'>Badge</Badge>
-			<Badge colorStyle='blue' size='md'>Badge</Badge>
-			<Badge colorStyle='green' size='md'>Badge</Badge>
-			<Badge colorStyle='red' size='md'>Badge</Badge>
-			<Badge colorStyle='yellow' size='md'>Badge</Badge>
-		</div>
-	</section>
+	<Hero/>
+	<About/>
+	<Services/>
+	<Process/>
 </MainLayout>
