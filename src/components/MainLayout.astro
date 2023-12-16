@@ -1,5 +1,6 @@
 ---
 const { title } = Astro.props;
+import Footer from "./Footer.astro";
 ---
 <html lang="en">
     <head>
@@ -11,8 +12,9 @@ const { title } = Astro.props;
 	</head>
 	<body>
     <main class="container mt-sm px-sm space-y-xl sm:mt-md lg:mt-2xl sm:px-lg lg:px-xl xl:px-3xl lg:space-y-2xl">
-            <slot />
+        <slot />
     </main>
+	<Footer />
 	</body>
 </html>
 </html>
