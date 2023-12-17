@@ -17,6 +17,7 @@ export const ButtonCVA = cva("btn rounded-md", {
     colorStyle: {
       primary: "btn-primary",
       secondary: "btn-secondary",
+      white: "bg-white text-black hover:bg-neutral-content hover:text-base-100",
       accent: "btn-accent",
       blue: "btn-info",
       red: "btn-error",
