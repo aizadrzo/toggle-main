@@ -1,8 +1,8 @@
 ---
 import { Badge, Text } from "./Base";
-import DataDrivenIcon from '../../public/icons/5.svg';
-import TheCurveIcon from '../../public/icons/6.svg';
-import VisibilityIcon from '../../public/icons/23.svg';
+import DataDrivenIcon from '../../public/icons/DataDriven.svg';
+import TheCurveIcon from '../../public/icons/Curve.svg';
+import VisibilityIcon from '../../public/icons/Visibility.svg';
 ---
 <section class="grid grid-cols-1 py-md gap-md lg:grid-cols-2 lg:py-lg lg:gap-lg xl:gap-3xl">
     <div class="h-3xl lg:h-full rounded-lg bg-neutral-200"></div>
@@ -15,7 +15,7 @@ import VisibilityIcon from '../../public/icons/23.svg';
         </Text>
         <div class="space-y-md">
             <div class="flex items-center gap-sm">
-                <img src={DataDrivenIcon.src} alt="Data-driven success" class="shrink-0 rounded-lg h-2xl w-auto border border-base-300"/>
+                <img src={DataDrivenIcon.src} alt="Data-driven success" class="shrink-0 rounded-lg p-sm h-2xl w-auto border border-base-300 bg-gradient-to-t from-base-300 to-transparent"/>
                 <div>
                     <Text variant="p" className="font-semibold">
                         Data-driven success
@@ -26,7 +26,7 @@ import VisibilityIcon from '../../public/icons/23.svg';
                 </div>
             </div>
             <div class="flex items-center gap-sm">
-                <img src={TheCurveIcon.src} alt="Stay ahead of the curve" class="shrink-0 rounded-lg h-2xl w-auto border border-base-300"/>
+                <img src={TheCurveIcon.src} alt="Stay ahead of the curve" class="shrink-0 rounded-lg p-sm h-2xl w-auto border border-base-300 bg-gradient-to-t from-base-300 to-transparent"/>
                 <div>
                     <Text variant="p" className="font-semibold">
                         Stay ahead of the curve
@@ -37,9 +37,7 @@ import VisibilityIcon from '../../public/icons/23.svg';
                 </div>
             </div>
             <div class="flex items-center gap-sm">
-                <img src={VisibilityIcon.src} alt="Transparency and Visibility" class="shrink-0 rounded-lg h-2xl w-auto border border-base-300"/>
-                <!-- <span class="shrink-0 rounded-lg p-md bg-neutral-200">
-                </span> -->
+                <img src={VisibilityIcon.src} alt="Transparency and Visibility" class="shrink-0 rounded-lg p-sm h-2xl w-auto border border-base-300 bg-gradient-to-t from-base-300 to-transparent"/>
                 <div>
                     <Text variant="p" className="font-semibold">
                         Transparency and Visibility
