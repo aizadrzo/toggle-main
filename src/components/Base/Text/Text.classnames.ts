@@ -22,7 +22,7 @@ export const Tags: Record<VariantType, keyof JSX.IntrinsicElements> = {
 };
 
 export const Sizes: Record<VariantType, string> = {
-  display: "text-[42px] sm:text-7xl font-bold",
+  display: "text-[42px] sm:text-7xl font-bold leading-10",
   h1: "text-[32px] sm:text-[40px] font-semibold leading-10",
   h2: "text-[28px] sm:text-[32px] font-semibold",
   h3: "text-2xl font-semibold",
@@ -35,7 +35,7 @@ export const Sizes: Record<VariantType, string> = {
 export const TextCVA = cva("", {
   variants: {
     colorStyle: {
-      primary: "text-white",
+      primary: "text-primary",
       secondary: "text-[#C7C7C7]",
       accent: "text-accent",
       red: "text-error",
