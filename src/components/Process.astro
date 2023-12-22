@@ -1,52 +1,59 @@
 ---
 import { Text } from "./Base";
+
+const sectionTitle = "A simple, yet powerful and efficient process";
+const processes = [
+  {
+    index: "01",
+    title: "Marketing Plan",
+    description:
+      "Kick-start by crafting a comprehensive marketing plan tailored to your website's goals and target audience. This includes defining strategies, target platforms, and performance metrics to achieve optimal results.",
+  },
+  {
+    index: "02",
+    title: "Execution",
+    description:
+      "Put our expert team to work, implementing the marketing strategies across various channels. This includes optimizing website content, running PPC campaigns, social media outreach, and other key activities to drive traffic and engagement.",
+  },
+  {
+    index: "03",
+    title: "Growth & Scale",
+    description:
+      "Continuously monitor performance, analyze data, and fine-tune our strategies. This iterative process allows us to scale successful tactics and identify areas for improvement, ensuring sustainable growth for your website.",
+  },
+];
 ---
-<section class="grid grid-cols-1 py-md gap-md lg:grid-cols-2 lg:py-lg lg:gap-lg xl:gap-3xl">
-    <div>
-        <Text variant='h1' className="pb-xl text-center lg:text-left">
-            A simple, yet powerful and efficient process
-        </Text>
-        <div class="space-y-sm">
-            <div class="flex items-start gap-sm p-lg border border-base-300 rounded-lg hover:bg-gradient-to-t hover:from-base-300 hover:to-transparent hover:border-gray-200 duration-300 ease-in-out cursor-pointer">
-                    <Text variant="h4" className="shrink-0 font-bold p-sm" colorStyle='secondary'>
-                        01
-                    </Text>
-                <div>
-                    <Text variant="h4" className="font-semibold">
-                        Marketing Plan
-                    </Text>
-                    <Text variant="small-p" colorStyle='secondary'>
-                        Kick-start by crafting a comprehensive marketing plan tailored to your website's goals and target audience. This includes defining strategies, target platforms, and performance metrics to achieve optimal results.
-                    </Text>
-                </div>
+
+<section
+  class="grid grid-cols-1 py-md gap-md lg:grid-cols-2 lg:py-lg lg:gap-lg xl:gap-3xl"
+>
+  <div>
+    <Text variant="h1" className="pb-xl text-center lg:text-left">
+      {sectionTitle}
+    </Text>
+    <div class="space-y-sm">
+      {
+        processes.map((process) => (
+          <div class="flex items-start gap-sm p-lg border border-base-300 rounded-lg hover:bg-gradient-to-t hover:from-base-300 hover:to-transparent hover:border-gray-200 duration-300 ease-in-out cursor-pointer">
+            <Text
+              variant="h4"
+              className="shrink-0 font-bold p-sm"
+              colorStyle="secondary"
+            >
+              {process.index}
+            </Text>
+            <div>
+              <Text variant="h4" className="font-semibold">
+                {process.title}
+              </Text>
+              <Text variant="small-p" colorStyle="secondary">
+                {process.description}
+              </Text>
             </div>
-            <div class="flex items-start gap-sm p-lg border border-base-300 rounded-lg hover:bg-gradient-to-t hover:from-base-300 hover:to-transparent hover:border-gray-200 duration-300 ease-in-out cursor-pointer">
-                    <Text variant="h4" className="shrink-0 font-bold p-sm" colorStyle='secondary'>
-                        02
-                    </Text>
-                <div>
-                    <Text variant="h4" className="font-semibold">
-                        Execution
-                    </Text>
-                    <Text variant="small-p" colorStyle='secondary'>
-                        Put our expert team to work, implementing the marketing strategies across various channels. This includes optimizing website content, running PPC campaigns, social media outreach, and other key activities to drive traffic and engagement.
-                    </Text>
-                </div>
-            </div>
-            <div class="flex items-start gap-sm p-lg border border-base-300 rounded-lg hover:bg-gradient-to-t hover:from-base-300 hover:to-transparent hover:border-gray-200 duration-300 ease-in-out cursor-pointer">
-                    <Text variant="h4" className="shrink-0 font-bold p-sm" colorStyle='secondary'>
-                        03
-                    </Text>
-                <div>
-                    <Text variant="h4" className="font-semibold">
-                        Growth & Scale
-                    </Text>
-                    <Text variant="small-p" colorStyle='secondary'>
-                        Continuously monitor performance, analyze data, and fine-tune our strategies. This iterative process allows us to scale successful tactics and identify areas for improvement, ensuring sustainable growth for your website.
-                    </Text>
-                </div>
-            </div>
-        </div>
+          </div>
+        ))
+      }
     </div>
-    <div class="h-3xl lg:h-full rounded-lg bg-neutral-200"></div>
+  </div>
+  <div class="h-3xl lg:h-full rounded-lg bg-neutral-200"></div>
 </section>

@@ -6,110 +6,75 @@ import Content from "../../public/icons/Content.svg";
 import Graph from "../../public/icons/Graph.svg";
 import Mail from "../../public/icons/Mail.svg";
 import Social from "../../public/icons/Social.svg";
+
+const sectionTitle = "High-impact services to help your business";
+const services = [
+  {
+    src: PPC.src,
+    title: "Pay-per Click Advertising",
+    description:
+      "Drive Conversions: Targeted campaigns on Google, Bing, & social media, leveraging keywords, ad copy, & bid optimization for high ROI.",
+  },
+  {
+    src: Social.src,
+    title: "Social Media Marketing",
+    description:
+      "Enjoy tailored social media strategies on Facebook, Instagram, Twitter, LinkedIn, and more. Boost brand visibility and audience engagement effortlessly.",
+  },
+  {
+    src: Content.src,
+    title: "Content Marketing",
+    description:
+      "Eye-catching blogs, informative infographics, and more. Boost brand authority and drive organic traffic with our content marketing strategies.",
+  },
+  {
+    src: Mail.src,
+    title: "Email Marketing",
+    description:
+      "Maximize Email Success: Expert strategies for targeted content, improved open rates, and unparalleled conversions.",
+  },
+  {
+    src: CRO.src,
+    title: "Conversion Rate Optimization",
+    description:
+      "Optimize conversions with our CRO services. Utilize data-driven analysis, enhanced UX, and optimized landing pages for better results.",
+  },
+  {
+    src: Graph.src,
+    title: "Analytics and Reporting",
+    description:
+      "Utilize real-time data for informed decisions, strategy refinement, and continuous improvement, converting clicks into effortless conversions.",
+  },
+];
 ---
 
 <section class="py-md lg:py-lg">
   <div class="max-w-full flex justify-center">
     <Text variant="h1" className="w-full lg:w-2/3" align="center">
-      High-impact services to help your business
+      {sectionTitle}
     </Text>
   </div>
   <div
     class="grid grid-cols-1 gap-lg pt-xl md:grid-cols-2 lg:grid-cols-3 lg:gap-xl lg:pt-2xl"
   >
-    <div>
-      <div class="flex flex-wrap items-center gap-md pb-sm">
-        <img
-          src={PPC.src}
-          alt="pay-per-click"
-          class="h-2xl w-auto p-sm border border-base-300 bg-gradient-to-t from-base-300 to-transparent rounded-lg"
-        />
-        <Text variant="h3" className="w-full lg:w-3/6">
-          Pay-per Click Advertising
-        </Text>
-      </div>
-      <Text variant="small-p" colorStyle="secondary">
-        Drive Conversions: Targeted campaigns on Google, Bing, & social media,
-        leveraging keywords, ad copy, & bid optimization for high ROI.
-      </Text>
-    </div>
-    <div>
-      <div class="flex flex-wrap items-center gap-md pb-sm">
-        <img
-          src={Social.src}
-          alt="Social Media Marketing"
-          class="h-2xl w-auto p-sm border border-base-300 bg-gradient-to-t from-base-300 to-transparent rounded-lg"
-        />
-        <Text variant="h3" className="w-full lg:w-3/6">
-          Social Media Marketing
-        </Text>
-      </div>
-      <Text variant="small-p" colorStyle="secondary">
-        Enjoy tailored social media strategies on Facebook, Instagram, Twitter,
-        LinkedIn, and more. Boost brand visibility and audience engagement
-        effortlessly.
-      </Text>
-    </div>
-    <div>
-      <div class="flex flex-wrap items-center gap-md pb-sm">
-        <img
-          src={Content.src}
-          alt="Email Marketing"
-          class="h-2xl w-auto p-sm border border-base-300 bg-gradient-to-t from-base-300 to-transparent rounded-lg"
-        />
-        <Text variant="h3" className="w-full lg:w-3/6">Content Marketing</Text>
-      </div>
-      <Text variant="small-p" colorStyle="secondary">
-        Eye-catching blogs, informative infographics, and more. Boost brand
-        authority and drive organic traffic with our content marketing
-        strategies.
-      </Text>
-    </div>
-    <div>
-      <div class="flex flex-wrap items-center gap-md pb-sm">
-        <img
-          src={Mail.src}
-          alt="Conversion Rate Optimization"
-          class="h-2xl w-auto p-sm border border-base-300 bg-gradient-to-t from-base-300 to-transparent rounded-lg"
-        />
-        <Text variant="h3" className="w-full lg:w-3/6">Email Marketing</Text>
-      </div>
-      <Text variant="small-p" colorStyle="secondary">
-        Maximize Email Success: Expert strategies for targeted content, improved
-        open rates, and unparalleled conversions.
-      </Text>
-    </div>
-    <div>
-      <div class="flex flex-wrap items-center gap-md pb-sm">
-        <img
-          src={CRO.src}
-          alt="Conversion Rate Optimization"
-          class="h-2xl w-auto p-sm border border-base-300 bg-gradient-to-t from-base-300 to-transparent rounded-lg"
-        />
-        <Text variant="h3" className="w-full lg:w-3/6">
-          Conversion Rate Optimization
-        </Text>
-      </div>
-      <Text variant="small-p" colorStyle="secondary">
-        Optimize conversions with our CRO services. Utilize data-driven
-        analysis, enhanced UX, and optimized landing pages for better results.
-      </Text>
-    </div>
-    <div>
-      <div class="flex flex-wrap items-center gap-md pb-sm">
-        <img
-          src={Graph.src}
-          alt="Analytics and Reporting"
-          class="h-2xl w-auto p-sm border border-base-300 bg-gradient-to-t from-base-300 to-transparent rounded-lg"
-        />
-        <Text variant="h3" className="w-full lg:w-3/6">
-          Analytics and Reporting
-        </Text>
-      </div>
-      <Text variant="small-p" colorStyle="secondary">
-        Utilize real-time data for informed decisions, strategy refinement, and
-        continuous improvement, converting clicks into effortless conversions.
-      </Text>
-    </div>
+    {
+      services.map((service) => (
+        <div>
+          <div class="flex flex-wrap items-center gap-md pb-sm">
+            <img
+              src={service.src}
+              alt={service.title}
+              class="h-2xl w-auto p-sm border border-base-300 bg-gradient-to-t from-base-300 to-transparent rounded-lg"
+            />
+            <Text variant="h3" className="w-full lg:w-3/6">
+              {service.title}
+            </Text>
+          </div>
+          <Text variant="small-p" colorStyle="secondary">
+            {service.description}
+          </Text>
+        </div>
+      ))
+    }
   </div>
 </section>

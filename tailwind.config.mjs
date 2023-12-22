@@ -24,7 +24,7 @@ export default {
 					...require("daisyui/src/theming/themes")["black"],
 					primary: '#F5F3EE',
 					secondary: '#1D1D1D',
-					accent: '#8678f9',
+					accent: '#3898ec',
 				},
 			},
 		]
