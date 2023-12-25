@@ -20,11 +20,8 @@ export default {
 	daisyui: {
 		themes: [
 			{
-				black: {
-					...require("daisyui/src/theming/themes")["black"],
-					primary: '#F5F3EE',
-					secondary: '#1D1D1D',
-					accent: '#3898ec',
+				lofi: {
+					...require("daisyui/src/theming/themes")["lofi"],
 				},
 			},
 		]
