@@ -22,8 +22,17 @@ export default {
 			{
 				lofi: {
 					...require("daisyui/src/theming/themes")["lofi"],
+					"primary": "#7363F3",
+					"secondary": "#0C1E1B",
+					"accent": '#EF9A63',
+					"neutral": "#F3F9F3",
+					"base-100": "#FFFFFF",
+					"success": "#38B27A",
+					"info": "#4255F9",
+					"warning": "#FCD554",
+					"error": "#EE2626"
 				},
-			},
+			}
 		]
 	}
 }

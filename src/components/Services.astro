@@ -59,13 +59,15 @@ const services = [
   >
     {
       services.map((service) => (
-        <div>
+        <div class="bg-neutral p-lg rounded-lg">
           <div class="flex flex-wrap items-center gap-md pb-sm">
-            <img
-              src={service.src}
-              alt={service.title}
-              class="h-2xl w-auto p-sm border border-base-300 bg-gradient-to-t from-base-300 to-transparent rounded-lg"
-            />
+            <div class="rounded-full bg-white">
+              <img
+                src={service.src}
+                alt={service.title}
+                class="h-16 w-auto p-3.5"
+              />
+            </div>
             <Text variant="h3" className="w-full lg:w-3/6">
               {service.title}
             </Text>
