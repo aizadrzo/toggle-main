@@ -1,6 +1,6 @@
 import { type VariantProps, cva } from "class-variance-authority";
 
-export const ButtonCVA = cva("btn rounded-md", {
+export const ButtonCVA = cva("btn rounded-lg uppercase", {
   variants: {
     size: {
       xs: "btn-xs",
@@ -17,7 +17,7 @@ export const ButtonCVA = cva("btn rounded-md", {
     colorStyle: {
       primary: "btn-primary",
       secondary: "btn-secondary",
-      accent: "btn-accent",
+      accent: "btn-accent text-white",
       blue: "btn-info",
       red: "btn-error",
       yellow: "btn-warning",

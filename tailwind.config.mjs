@@ -2,15 +2,28 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}'],
 	theme: {
-		container: {
-			center: true,
-			padding: {
-				DEFAULT: "1rem",
-				sm: "2rem",
-				lg: "4rem",
+		extend: {
+			spacing: {
+				sm: '16px',
+				md: '24px',
+				lg: '32px',
+				xl: '40px',
+				'2xl': '88px',
+				'3xl': '104px',
 			},
-		},
+			container: {
+				center: true,
+			}
+		}
 	},
 	plugins: [require("daisyui")],
-	daisyui: { themes: ['lofi'] }
+	daisyui: {
+		themes: [
+			{
+				lofi: {
+					...require("daisyui/src/theming/themes")["lofi"],
+				},
+			},
+		]
+	}
 }

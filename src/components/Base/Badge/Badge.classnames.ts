@@ -3,10 +3,9 @@ import { type VariantProps, cva } from "class-variance-authority";
 export const BadgeCVA = cva("badge rounded-md", {
   variants: {
     size: {
-      xs: "badge-xs py-3",
-      sm: "badge-sm py-3",
-      md: "badge-md py-4",
-      lg: "badge-lg py-6",
+      sm: "badge-sm py-sm",
+      md: "badge-md py-md",
+      lg: "badge-lg py-lg",
     },
     colorStyle: {
       primary: "badge-primary",
