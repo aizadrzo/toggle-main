@@ -5,9 +5,6 @@ export const LinkCVA = cva("link underline-offset-2", {
     colorStyle: {
       primary: "text-primary",
       secondary: "text-secondary",
-      green: "text-success",
-      yellow: "text-warning",
-      blue: "text-info",
     },
     isBold: {
       true: "font-bold",

@@ -1,11 +1,13 @@
 ---
-import { Text } from "./Base";
+import { Badge, Text } from "./Base";
+import { Cog6ToothIcon } from "@heroicons/react/24/outline";
 import PPC from "../../public/icons/PPC.svg";
 import CRO from "../../public/icons/CRO.svg";
 import Content from "../../public/icons/Content.svg";
 import Graph from "../../public/icons/Graph.svg";
 import Mail from "../../public/icons/Mail.svg";
 import Social from "../../public/icons/Social.svg";
+import Container from "./Container.astro";
 
 const sectionTitle = "High-impact services to help your business";
 const services = [
@@ -48,30 +50,31 @@ const services = [
 ];
 ---
 
-<section class="py-md lg:py-lg">
+<Container className="bg-neutral">
+  <div class="inline-flex justify-center items-center w-full pb-md">
+    <Badge><Cog6ToothIcon className="w-3" />Our Services</Badge>
+  </div>
   <div class="max-w-full flex justify-center">
     <Text variant="h1" className="w-full lg:w-2/3" align="center">
       {sectionTitle}
     </Text>
   </div>
   <div
-    class="grid grid-cols-1 gap-lg pt-xl md:grid-cols-2 lg:grid-cols-3 lg:gap-xl lg:pt-2xl"
+    class="grid grid-cols-1 gap-md pt-md md:grid-cols-2 lg:grid-cols-3 lg:pt-lg"
   >
     {
       services.map((service) => (
-        <div class="bg-neutral p-lg rounded-lg">
-          <div class="flex flex-wrap items-center gap-md pb-sm">
-            <div class="rounded-full bg-white">
-              <img
-                src={service.src}
-                alt={service.title}
-                class="h-16 w-auto p-3.5"
-              />
-            </div>
-            <Text variant="h3" className="w-full lg:w-3/6">
-              {service.title}
-            </Text>
+        <div class="bg-white border border-border-color p-lg rounded-lg">
+          <div class="rounded-full bg-base-100 pb-sm">
+            <img
+              src={service.src}
+              alt={service.title}
+              class="h-16 w-auto p-3.5 bg-secondary rounded-md"
+            />
           </div>
+          <Text variant="h4" className="pb-sm">
+            {service.title}
+          </Text>
           <Text variant="small-p" colorStyle="secondary">
             {service.description}
           </Text>
@@ -79,4 +82,4 @@ const services = [
       ))
     }
   </div>
-</section>
+</Container>

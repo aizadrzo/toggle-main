@@ -1,14 +1,27 @@
 ---
-import { Text, Button } from "./Base";
+import { Badge, Button, Text } from "./Base";
+import Container from "./Container.astro";
+import { SparklesIcon } from "@heroicons/react/24/outline";
+const sectionTitle = "Connect with Our Team for Tailored Digital Solutions";
+const sectionDescription =
+  "Whether you're seeking guidance, exploring opportunities, or ready to launch a campaign, our experts are here to assist. Share your inquiries or project details, and let's create something great together.";
 ---
 
-<section class="py-md lg:py-lg border border-base-300 rounded-lg">
+<Container className="py-md lg:py-lg">
   <div
-    class="mx-auto w-full sm:w-2/3 p-xl md:p-3xl flex flex-col items-center gap-y-lg"
+    class="flex flex-col lg:flex-row gap-y-lg gap-x-md items-top justify-between pb-md lg:pb-lg"
   >
-    <Text variant="h1" align="center" className="w-full lg:w-4/6">
-      Take your business to the next level
-    </Text>
-    <Button size="md" className="text-center">Book a call</Button>
+    <div class="w-full lg:w-2/3">
+      <Badge className="mb-sm">
+        <SparklesIcon className="w-3" /> Contact Us
+      </Badge>
+      <Text variant="h1">{sectionTitle}</Text>
+    </div>
+    <div class="w-full lg:w-1/3">
+      <Text variant="p" colorStyle="secondary" className="pb-md">
+        {sectionDescription}
+      </Text>
+      <Button>Book a Call</Button>
+    </div>
   </div>
-</section>
+</Container>

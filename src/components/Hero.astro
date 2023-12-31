@@ -1,28 +1,44 @@
 ---
-import { Text, Button } from "./Base/index";
+import { Text, Button, Badge } from "./Base/index";
+import Container from "./Container.astro";
+import { BoltIcon } from "@heroicons/react/24/outline";
 ---
 
-<section
-  class="mx-auto pt-sm pb-lg md:py-2xl lg:flex lg:h-full lg:items-center"
->
+<Container>
   <div
-    class="mx-auto max-w-full lg:max-w-3xl flex flex-col items-center justify-center"
+    class="absolute inset-0 -z-10 h-2/3 w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"
   >
-    <Text variant="display" align="center" className="pb-lg">
-      Elevate Your Brand's <br />
-       Digital Journey
-    </Text>
-    <Text
-      variant="h4"
-      colorStyle="secondary"
-      align="center"
-      className="pb-xl leading-relaxed w-full lg:w-5/6"
+  </div>
+  <div class="mx-auto">
+    <div
+      class="mx-auto max-w-full lg:max-w-3xl flex flex-col items-center justify-center"
     >
-      Join our results-driven digital marketing agency and unlock your brand's
-      full potential in the digital landscape.
-    </Text>
-    <div class="flex items-center justify-center w-2/3">
-      <Button size="lg">Start my Project</Button>
+      <Badge className="mb-sm">
+        <BoltIcon className="w-3" /> Unleash Your Brand's <span
+          class="font-semibold">Digital Potential</span
+        >
+      </Badge>
+      <Text variant="display" align="center" className="pb-lg font-semibold">
+        Elevate Your Brand's <br />
+         Digital Journey
+      </Text>
+      <Text
+        variant="p"
+        colorStyle="secondary"
+        align="center"
+        className="pb-xl leading-relaxed w-full lg:w-5/6 font-normal"
+      >
+        Join our results-driven digital marketing agency and unlock your brand's
+        full potential in the digital landscape.
+      </Text>
+      <div class="flex items-center justify-center pb-2">
+        <Button>Get Started</Button>
+      </div>
+      <div class="flex flex-col">
+        <Text variant="small" colorStyle="secondary">
+          Servicing over 10+ clients over the world
+        </Text>
+      </div>
     </div>
   </div>
-</section>
+</Container>

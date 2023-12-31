@@ -1,5 +1,7 @@
 ---
-import { Text } from "./Base";
+import { Badge, Text } from "./Base";
+import Container from "./Container.astro";
+import { FunnelIcon } from "@heroicons/react/24/outline";
 
 const sectionTitle = "A simple, yet powerful and efficient process";
 const processes = [
@@ -24,36 +26,47 @@ const processes = [
 ];
 ---
 
-<section
-  class="grid grid-cols-1 py-md gap-md lg:grid-cols-2 lg:py-lg lg:gap-lg xl:gap-3xl"
->
-  <div>
-    <Text variant="h1" className="pb-xl text-center lg:text-left">
-      {sectionTitle}
-    </Text>
-    <div class="space-y-sm">
-      {
-        processes.map((process) => (
-          <div class="flex items-start gap-sm p-lg border border-base-300 rounded-lg duration-300 ease-in-out cursor-pointer active:bg-neutral">
-            <Text
-              variant="h4"
-              className="shrink-0 font-bold p-sm"
-              colorStyle="secondary"
-            >
-              {process.index}
-            </Text>
-            <div>
-              <Text variant="h4" className="font-semibold">
-                {process.title}
-              </Text>
-              <Text variant="small-p" colorStyle="secondary">
-                {process.description}
-              </Text>
-            </div>
-          </div>
-        ))
-      }
-    </div>
+<div class="relative">
+  <div
+    class="absolute inset-0 -z-10 h-2/3 w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"
+  >
   </div>
-  <div class="h-3xl lg:h-full rounded-lg bg-neutral-200"></div>
-</section>
+  <Container>
+    <div class="grid grid-cols-1 gap-md lg:grid-cols-2 lg:gap-lg xl:gap-3xl">
+      <div>
+        <div class="w-full inline-flex justify-center lg:justify-start">
+          <Badge className="mb-sm">
+            <FunnelIcon className="w-3" />Our Process
+          </Badge>
+        </div>
+        <Text variant="h1" className="pb-xl text-center lg:text-left">
+          {sectionTitle}
+        </Text>
+        <div class="space-y-sm">
+          {
+            processes.map((process) => (
+              <div class="bg-white flex items-start gap-sm p-lg border border-base-300 rounded-lg duration-300 ease-in-out cursor-pointer active:bg-neutral">
+                <Text
+                  variant="h4"
+                  className="shrink-0 font-bold p-sm"
+                  colorStyle="secondary"
+                >
+                  {process.index}
+                </Text>
+                <div>
+                  <Text variant="h4" className="font-semibold">
+                    {process.title}
+                  </Text>
+                  <Text variant="small-p" colorStyle="secondary">
+                    {process.description}
+                  </Text>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <div class="h-3xl lg:h-full rounded-lg bg-neutral-200"></div>
+    </div>
+  </Container>
+</div>
