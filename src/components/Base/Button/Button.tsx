@@ -8,15 +8,13 @@ interface ButtonProps
 
 const Button: FC<ButtonProps> = ({
   className,
-  size,
   variant,
   children,
-  colorStyle,
-  active,
+  size,
   ...props
 }) => (
   <button
-    className={cn(ButtonCVA({ variant, size, colorStyle, className, active }))}
+    className={cn(ButtonCVA({ variant, size,className }))}
     {...props}
   >
     {children}

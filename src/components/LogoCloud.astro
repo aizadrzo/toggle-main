@@ -1,18 +1,22 @@
 ---
-import {Text} from './Base';
+import { Text } from "./Base";
+import Container from "./Container.astro";
 ---
-<section class="py-md lg:py-lg">
-    <div class="max-w-full flex justify-center">
-        <Text variant='h1' className="w-full lg:w-2/3" align='center'>
-            Companies we work with
-        </Text>
-    </div>
-    <div class="grid grid-cols-1 gap-lg pt-xl md:grid-cols-2 lg:grid-cols-3 lg:gap-xl lg:pt-2xl">
-        <div class="p-2xl rounded-lg bg-neutral-200"></div>
-        <div class="p-2xl rounded-lg bg-neutral-200"></div>
-        <div class="p-2xl rounded-lg bg-neutral-200"></div>
-        <div class="p-2xl rounded-lg bg-neutral-200"></div>
-        <div class="p-2xl rounded-lg bg-neutral-200"></div>
-        <div class="p-2xl rounded-lg bg-neutral-200"></div>
-    </div>
-</section>
+
+<Container className="py-md lg:py-lg">
+  <div class="max-w-full flex justify-center">
+    <Text variant="h1" className="w-full lg:w-2/3" align="center">
+      Companies we work with
+    </Text>
+  </div>
+  <div
+    class="grid grid-cols-1 gap-lg pt-xl md:grid-cols-2 lg:grid-cols-3 lg:gap-xl lg:pt-2xl"
+  >
+    <div class="p-2xl rounded-lg bg-neutral-200"></div>
+    <div class="p-2xl rounded-lg bg-neutral-200"></div>
+    <div class="p-2xl rounded-lg bg-neutral-200"></div>
+    <div class="p-2xl rounded-lg bg-neutral-200"></div>
+    <div class="p-2xl rounded-lg bg-neutral-200"></div>
+    <div class="p-2xl rounded-lg bg-neutral-200"></div>
+  </div>
+</Container>

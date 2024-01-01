@@ -1,21 +1,15 @@
-import React, { type FC, type ReactNode } from "react";
-import { BadgeCVA, type BadgeVariantProps } from "./Badge.classnames";
-import { cn } from "../../../utils";
+import React, { type PropsWithChildren, type ReactNode } from 'react'
+import { cn } from '../../../utils'
 
-interface BadgeProps extends BadgeVariantProps {
-  children: ReactNode;
-  className?: string;
+type Badge = {
+    children: ReactNode;
+    className?: string;
 }
 
-const Badge: FC<BadgeProps> = ({
-  children,
-  className,
-  size = "md",
-  colorStyle = "accent",
-}) => (
-  <div className={cn(BadgeCVA({ size, colorStyle, className }))}>
-    {children}
-  </div>
-);
+const Badge = ({children, className}:Badge) => {
+  return (
+    <div className={cn('border-border-color border bg-white rounded-full py-1 px-3 text-xs text-accent  inline-flex gap-1 tracking-wide', className)}>{children}</div>
+  )
+}
 
-export default Badge;
+export default Badge
