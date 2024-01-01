@@ -1,5 +1,5 @@
-import React, { type PropsWithChildren, type ReactNode } from 'react'
-import { cn } from '../../../utils'
+import { type ReactNode } from 'react'
+import { cn } from '../utils'
 
 type Badge = {
     children: ReactNode;
