@@ -1,7 +1,6 @@
 ---
 import { Badge, Text } from "./Base";
 import Container from "./Container.astro";
-import { FunnelIcon } from "@heroicons/react/24/outline";
 
 const sectionTitle = "A simple, yet powerful and efficient process";
 const processes = [
@@ -34,11 +33,6 @@ const processes = [
   <Container>
     <div class="grid grid-cols-1 gap-md lg:grid-cols-2 lg:gap-lg xl:gap-3xl">
       <div>
-        <div class="w-full inline-flex justify-center lg:justify-start">
-          <Badge className="mb-sm">
-            <FunnelIcon className="w-3" />Our Process
-          </Badge>
-        </div>
         <Text variant="h1" className="pb-xl text-center lg:text-left">
           {sectionTitle}
         </Text>

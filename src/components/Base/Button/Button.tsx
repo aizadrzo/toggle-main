@@ -10,10 +10,11 @@ const Button: FC<ButtonProps> = ({
   className,
   variant,
   children,
+  size,
   ...props
 }) => (
   <button
-    className={cn(ButtonCVA({ variant, className }))}
+    className={cn(ButtonCVA({ variant, size,className }))}
     {...props}
   >
     {children}

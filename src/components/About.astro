@@ -1,7 +1,6 @@
 ---
 import { Badge, Text } from "./Base";
 import Container from "./Container.astro";
-import { FaceSmileIcon } from "@heroicons/react/24/outline";
 import DataDrivenIcon from "../../public/icons/DataDriven.svg";
 import TheCurveIcon from "../../public/icons/Curve.svg";
 import VisibilityIcon from "../../public/icons/Visibility.svg";
@@ -35,7 +34,6 @@ const values = [
   <div class="grid grid-cols-1 gap-md lg:grid-cols-2 lg:gap-lg xl:gap-3xl">
     <div class="h-3xl lg:h-full rounded-lg bg-neutral-200"></div>
     <div class="w-full flex flex-col items-start">
-      <Badge className="mb-sm"><FaceSmileIcon className="w-3" />About us</Badge>
       <Text variant="h1" className="pb-md">
         {sectionTitle}
       </Text>
